@@ -1,0 +1,82 @@
+{
+    "presupuesto": 40000,
+    "platos": {
+        "Ensalada de Frutas": {
+            
+            "costo": 200,
+            "nutrientes": {"calorias": 150, "proteinas": 3},
+            "ingredientes": {"manzana": 50, "platano": 30, "naranja": 40},
+            "tipo": "entrada"
+        },
+        "Sopa de Verduras": {
+            "costo": 250,
+            "nutrientes": {"calorias": 180, "proteinas": 4},
+            "ingredientes": {"zanahoria": 50, "papa": 40, "apio": 30},
+            "tipo": "entrada"
+        },
+        "Pollo Asado": {
+            "costo": 800,
+            "nutrientes": {"calorias": 600, "proteinas": 35},
+            "ingredientes": {"pollo": 150, "cebolla": 30, "ajo": 10},
+            "tipo": "principal"
+        },
+        "Pescado al Horno": {
+            "costo": 900,
+            "nutrientes": {"calorias": 550, "proteinas": 30},
+            "ingredientes": {"pescado": 200, "limon": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Arroz Blanco": {
+            "costo": 150,
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"arroz": 100},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada Mixta": {
+            "costo": 180,
+            "nutrientes": {"calorias": 100, "proteinas": 2},
+            "ingredientes": {"lechuga": 50, "tomate": 30},
+            "tipo": "acompanamiento"
+        },
+        "Flan de Vainilla": {
+            "costo": 200,
+            "nutrientes": {"calorias": 200, "proteinas": 5},
+            "ingredientes": {"leche": 80, "azucar": 30, "huevo": 20},
+            "tipo": "postre"
+        },
+        "Gelatina de Fruta": {
+            "costo": 150,
+            "nutrientes": {"calorias": 150, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "fruta": 30},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "manzana": 500, "platano": 300, "naranja": 400,
+        "zanahoria": 300, "papa": 400, "apio": 300,
+        "pollo": 1000, "cebolla": 500, "ajo": 200,
+        "pescado": 800, "limon": 300, "perejil": 200,
+        "arroz": 700, "lechuga": 600, "tomate": 500,
+        "leche": 800, "azucar": 400, "huevo": 300,
+        "gelatina": 500, "fruta": 400
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Ensalada de Frutas": 11, "Sopa de Verduras": 11,
+            "Pollo Asado": 11, "Pescado al Horno": 11,
+            "Arroz Blanco": 11, "Ensalada Mixta": 11,
+            "Flan de Vainilla": 11, "Gelatina de Fruta": 11
+        }
+    }
+}

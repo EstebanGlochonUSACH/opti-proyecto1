@@ -1,4 +1,4 @@
-import os, platform
+import os, platform, json
 import pulp
 import time
 import pandas as pd
@@ -99,47 +99,16 @@ def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupues
     return resultados
 
 # Ejemplo de uso
-platos = {
-    'Entrada1': {'costo': 300, 'nutrientes': {'calorias': 100, 'proteinas': 5}, 'ingredientes': {'lechuga': 20, 'zanahoria': 10}, 'tipo': 'entrada'},
-    'Entrada2': {'costo': 350, 'nutrientes': {'calorias': 120, 'proteinas': 6}, 'ingredientes': {'palta': 15, 'tomate': 25}, 'tipo': 'entrada'},
-    'Principal1': {'costo': 800, 'nutrientes': {'calorias': 600, 'proteinas': 35}, 'ingredientes': {'pollo': 150, 'arroz': 100}, 'tipo': 'principal'},
-    'Principal2': {'costo': 750, 'nutrientes': {'calorias': 550, 'proteinas': 30}, 'ingredientes': {'carne': 200, 'papas': 150}, 'tipo': 'principal'},
-    'Acomp1': {'costo': 200, 'nutrientes': {'calorias': 150, 'proteinas': 3}, 'ingredientes': {'pure': 100}, 'tipo': 'acompanamiento'},
-    'Acomp2': {'costo': 220, 'nutrientes': {'calorias': 180, 'proteinas': 4}, 'ingredientes': {'ensalada': 80}, 'tipo': 'acompanamiento'},
-    'Postre1': {'costo': 150, 'nutrientes': {'calorias': 100, 'proteinas': 2}, 'ingredientes': {'manzana': 50}, 'tipo': 'postre'},
-    'Postre2': {'costo': 180, 'nutrientes': {'calorias': 120, 'proteinas': 3}, 'ingredientes': {'pera': 60}, 'tipo': 'postre'}
-}
-
-ingredientes = {
-    'lechuga': 500, 'zanahoria': 300, 'palta': 200, 'tomate': 400,
-    'pollo': 1000, 'arroz': 700, 'carne': 800, 'papas': 600,
-    'pure': 500, 'ensalada': 400, 'manzana': 300, 'pera': 200
-}
-
-datos_composicion = {
-    'desayuno': {'entrada': 0, 'principal': 1, 'postre': 1, 'acompanamiento': 0},
-    'almuerzo': {'entrada': 1, 'principal': 1, 'postre': 1, 'acompanamiento': 1},
-    'cena': {'entrada': 0, 'principal': 1, 'postre': 1, 'acompanamiento': 0}
-}
-
-datos_nutrientes = {
-    # 'desayuno': {'min_calorias': 300, 'max_calorias': 400},
-    # 'almuerzo': {'min_calorias': 800, 'max_calorias': 1000},
-    # 'cena': {'min_calorias': 600, 'max_calorias': 700},
-    'dia': {'min_calorias': 2200, 'max_calorias': 2700}
-}
-
-datos_restricciones = {
-    'frecuencia': {
-        'Entrada1': 11, 'Entrada2': 11,
-        'Principal1': 11, 'Principal2': 11,
-        'Acomp1': 11, 'Acomp2': 11,
-        'Postre1': 11, 'Postre2': 11
-    }
-}
-
-presupuesto = 5000000
+datos = json.load(open('test.json'))
 
 # Llamar a la función con datos de prueba
-resultados = menu_optimization(platos, ingredientes, datos_nutrientes, datos_restricciones, presupuesto, datos_composicion)
+resultados = menu_optimization(
+    datos["platos"],
+    datos["ingredientes"],
+    datos["nutrientes"],
+    datos["restricciones"],
+    datos["presupuesto"],
+    datos["composicion"]
+)
+print('')
 pp.pprint(resultados)
