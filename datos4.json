@@ -1,79 +1,67 @@
 {
     "presupuesto": 60000,
     "platos": {
-        "Crema de Zapallo": {
-            "costo": 250,
-            "nutrientes": {"calorias": 180, "proteinas": 5},
-            "ingredientes": {"zapallo": 100, "crema": 50},
-            "tipo": "entrada"
-        },
-        "Consome de Pollo": {
+        "Sopa de Verduras": {
             "costo": 300,
-            "nutrientes": {"calorias": 150, "proteinas": 7},
-            "ingredientes": {"pollo": 50, "zanahoria": 30, "apio": 20},
+            "nutrientes": {"calorias": 150, "proteinas": 4},
+            "ingredientes": {"zanahoria": 50, "papa": 40, "apio": 30},
             "tipo": "entrada"
         },
-        "Pasta Alfredo": {
-            "costo": 850,
-            "nutrientes": {"calorias": 600, "proteinas": 25},
-            "ingredientes": {"pasta": 150, "crema": 50, "queso": 30},
-            "tipo": "principal"
-        },
-        "Estofado de Vacuno": {
-            "costo": 950,
-            "nutrientes": {"calorias": 700, "proteinas": 40},
-            "ingredientes": {"vacuno": 200, "papas": 100, "cebolla": 50},
-            "tipo": "principal"
-        },
-        "Pure de Papas": {
-            "costo": 200,
-            "nutrientes": {"calorias": 200, "proteinas": 3},
-            "ingredientes": {"papa": 150, "mantequilla": 20},
-            "tipo": "acompanamiento"
-        },
-        "Ensalada Chilena": {
-            "costo": 150,
+        "Ensalada Fresca": {
+            "costo": 250,
             "nutrientes": {"calorias": 100, "proteinas": 2},
-            "ingredientes": {"tomate": 50, "cebolla": 30, "cilantro": 20},
+            "ingredientes": {"lechuga": 50, "tomate": 40, "pepino": 30},
+            "tipo": "entrada"
+        },
+        "Pollo a la Plancha": {
+            "costo": 800,
+            "nutrientes": {"calorias": 500, "proteinas": 40},
+            "ingredientes": {"pollo": 150, "ajo": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Merluza al Vapor": {
+            "costo": 850,
+            "nutrientes": {"calorias": 400, "proteinas": 35},
+            "ingredientes": {"merluza": 150, "limon": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Arroz Integral": {
+            "costo": 200,
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"arroz": 100},
             "tipo": "acompanamiento"
         },
-        "Budin de Pan": {
+        "Verduras Salteadas": {
             "costo": 300,
-            "nutrientes": {"calorias": 300, "proteinas": 6},
-            "ingredientes": {"pan": 100, "leche": 50, "azucar": 30},
-            "tipo": "postre"
-        },
-        "Tiramisu": {
-            "costo": 450,
-            "nutrientes": {"calorias": 400, "proteinas": 8},
-            "ingredientes": {"mascarpone": 50, "cafe": 20, "bizcocho": 50},
-            "tipo": "postre"
-        },
-        "Arroz con Leche": {
-            "costo": 250,
-            "nutrientes": {"calorias": 250, "proteinas": 5},
-            "ingredientes": {"arroz": 100, "leche": 50, "canela": 10},
-            "tipo": "postre"
+            "nutrientes": {"calorias": 150, "proteinas": 4},
+            "ingredientes": {"calabacin": 50, "zanahoria": 40, "cebolla": 30},
+            "tipo": "acompanamiento"
         },
         "Fruta Picada": {
             "costo": 200,
-            "nutrientes": {"calorias": 120, "proteinas": 2},
-            "ingredientes": {"manzana": 50, "pera": 40, "plátano": 30},
+            "nutrientes": {"calorias": 100, "proteinas": 1},
+            "ingredientes": {"manzana": 50, "pera": 40, "naranja": 30},
+            "tipo": "postre"
+        },
+        "Gelatina Light": {
+            "costo": 150,
+            "nutrientes": {"calorias": 50, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "fruta": 30},
             "tipo": "postre"
         }
     },
     "ingredientes": {
-        "zapallo": 500, "crema": 300, "pollo": 800, "zanahoria": 500,
-        "apio": 300, "pasta": 600, "queso": 400, "vacuno": 1000,
-        "papas": 800, "cebolla": 600, "mantequilla": 200, "tomate": 500,
-        "cilantro": 300, "pan": 400, "leche": 1000, "azucar": 500,
-        "mascarpone": 200, "cafe": 100, "bizcocho": 400, "arroz": 600,
-        "canela": 100, "manzana": 400, "pera": 300, "plátano": 200
+        "zanahoria": 600, "papa": 500, "apio": 300,
+        "lechuga": 400, "tomate": 300, "pepino": 200,
+        "pollo": 800, "ajo": 200, "perejil": 100,
+        "merluza": 500, "limon": 200, "arroz": 400,
+        "calabacin": 300, "cebolla": 400, "manzana": 300,
+        "pera": 300, "naranja": 300, "gelatina": 200, "fruta": 300
     },
     "composicion": {
         "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
         "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
-        "cena": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 0}
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
     },
     "nutrientes": {
         "desayuno": {"min_calorias": 300, "max_calorias": 500},
@@ -83,11 +71,9 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Crema de Zapallo": 11, "Consome de Pollo": 11,
-            "Pasta Alfredo": 11, "Estofado de Vacuno": 11,
-            "Pure de Papas": 11, "Ensalada Chilena": 11,
-            "Budin de Pan": 11, "Tiramisu": 11,
-            "Arroz con Leche": 11, "Fruta Picada": 11
+            "Sopa de Verduras": 17, "Ensalada Fresca": 17, "Pollo a la Plancha": 17,
+            "Merluza al Vapor": 17, "Arroz Integral": 17, "Verduras Salteadas": 17,
+            "Fruta Picada": 17, "Gelatina Light": 17
         }
     }
 }

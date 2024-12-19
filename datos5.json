@@ -1,129 +1,60 @@
 {
     "presupuesto": 120000,
     "platos": {
-        "Sopa de Tomate": {
+        "Sopa de Verduras": {
             "costo": 250,
             "nutrientes": {"calorias": 120, "proteinas": 3},
-            "ingredientes": {"tomate": 80, "cebolla": 30},
+            "ingredientes": {"zanahoria": 50, "cebolla": 30, "papa": 40},
             "tipo": "entrada"
         },
-        "Sopa de Lentejas": {
-            "costo": 300,
-            "nutrientes": {"calorias": 150, "proteinas": 8},
-            "ingredientes": {"lentejas": 100, "zanahoria": 30, "cebolla": 30},
+        "Ensalada Fresca": {
+            "costo": 200,
+            "nutrientes": {"calorias": 100, "proteinas": 2},
+            "ingredientes": {"lechuga": 50, "pepino": 30, "tomate": 40},
             "tipo": "entrada"
         },
-        "Ensalada Cesar": {
-            "costo": 280,
-            "nutrientes": {"calorias": 200, "proteinas": 5},
-            "ingredientes": {"lechuga": 50, "pollo": 30, "queso": 20},
-            "tipo": "entrada"
-        },
-        "Ceviche de Atun": {
-            "costo": 400,
-            "nutrientes": {"calorias": 180, "proteinas": 12},
-            "ingredientes": {"atun": 100, "limon": 30, "cilantro": 20},
-            "tipo": "entrada"
-        },
-        "Pollo a la Plancha": {
-            "costo": 850,
-            "nutrientes": {"calorias": 500, "proteinas": 40},
+        "Pollo al Vapor": {
+            "costo": 800,
+            "nutrientes": {"calorias": 450, "proteinas": 35},
             "ingredientes": {"pollo": 150, "ajo": 20, "perejil": 10},
             "tipo": "principal"
         },
-        "Pescado al Vapor": {
-            "costo": 900,
-            "nutrientes": {"calorias": 400, "proteinas": 35},
-            "ingredientes": {"pescado": 200, "limon": 30, "perejil": 10},
+        "Merluza al Vapor": {
+            "costo": 850,
+            "nutrientes": {"calorias": 400, "proteinas": 30},
+            "ingredientes": {"merluza": 150, "limon": 20, "perejil": 10},
             "tipo": "principal"
         },
-        "Lasana de Verduras": {
-            "costo": 950,
-            "nutrientes": {"calorias": 600, "proteinas": 25},
-            "ingredientes": {"pasta": 150, "zapallo": 100, "queso": 50},
-            "tipo": "principal"
-        },
-        "Carne al Horno": {
-            "costo": 1000,
-            "nutrientes": {"calorias": 700, "proteinas": 50},
-            "ingredientes": {"vacuno": 200, "cebolla": 50, "ajo": 20},
-            "tipo": "principal"
-        },
-        "Pure de Papas": {
-            "costo": 180,
-            "nutrientes": {"calorias": 150, "proteinas": 2},
-            "ingredientes": {"papa": 150, "mantequilla": 30},
-            "tipo": "acompanamiento"
-        },
-        "Ensalada Mixta": {
+        "Arroz Integral": {
             "costo": 200,
-            "nutrientes": {"calorias": 100, "proteinas": 2},
-            "ingredientes": {"lechuga": 50, "zanahoria": 30, "tomate": 30},
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"arroz": 100},
             "tipo": "acompanamiento"
         },
-        "Arroz con Verduras": {
+        "Verduras Salteadas": {
             "costo": 250,
-            "nutrientes": {"calorias": 200, "proteinas": 4},
-            "ingredientes": {"arroz": 100, "zanahoria": 30, "champiñones": 50},
-            "tipo": "acompanamiento"
-        },
-        "Tarta de Verduras": {
-            "costo": 350,
-            "nutrientes": {"calorias": 300, "proteinas": 6},
-            "ingredientes": {"zapallo": 80, "huevo": 50, "queso": 40},
+            "nutrientes": {"calorias": 150, "proteinas": 4},
+            "ingredientes": {"zanahoria": 50, "calabacin": 40, "cebolla": 30},
             "tipo": "acompanamiento"
         },
         "Fruta Picada": {
-            "costo": 200,
-            "nutrientes": {"calorias": 120, "proteinas": 1},
-            "ingredientes": {"manzana": 50, "pera": 40, "naranja": 30},
-            "tipo": "postre"
-        },
-        "Flan de Caramelo": {
-            "costo": 350,
-            "nutrientes": {"calorias": 300, "proteinas": 7},
-            "ingredientes": {"leche": 100, "huevo": 50, "azucar": 30},
-            "tipo": "postre"
-        },
-        "Helado de Frutilla": {
-            "costo": 400,
-            "nutrientes": {"calorias": 250, "proteinas": 5},
-            "ingredientes": {"frutilla": 80, "leche": 100, "azucar": 40},
-            "tipo": "postre"
-        },
-        "Brownie de Chocolate": {
-            "costo": 450,
-            "nutrientes": {"calorias": 400, "proteinas": 6},
-            "ingredientes": {"chocolate": 100, "harina": 50, "azucar": 30},
-            "tipo": "postre"
-        },
-        "Gelatina de Limon": {
             "costo": 150,
-            "nutrientes": {"calorias": 100, "proteinas": 2},
-            "ingredientes": {"gelatina": 50, "limon": 30},
+            "nutrientes": {"calorias": 80, "proteinas": 1},
+            "ingredientes": {"manzana": 40, "pera": 30, "naranja": 30},
             "tipo": "postre"
         },
-        "Mousse de Maracuya": {
-            "costo": 450,
-            "nutrientes": {"calorias": 350, "proteinas": 5},
-            "ingredientes": {"maracuya": 80, "leche": 50, "huevo": 20},
-            "tipo": "postre"
-        },
-        "Budin de Pan": {
-            "costo": 300,
-            "nutrientes": {"calorias": 300, "proteinas": 6},
-            "ingredientes": {"pan": 100, "leche": 50, "azucar": 30},
+        "Gelatina Light": {
+            "costo": 150,
+            "nutrientes": {"calorias": 50, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "fruta": 30},
             "tipo": "postre"
         }
     },
     "ingredientes": {
-        "tomate": 1000, "cebolla": 800, "lentejas": 500, "zanahoria": 700,
-        "lechuga": 600, "pollo": 1000, "atun": 600, "limon": 600, "cilantro": 300,
-        "pescado": 800, "pasta": 1000, "zapallo": 800, "queso": 500, "vacuno": 1000,
-        "papa": 1500, "mantequilla": 300, "champiñones": 400, "huevo": 500,
-        "manzana": 700, "pera": 600, "naranja": 500, "leche": 1000, "azucar": 600,
-        "frutilla": 400, "chocolate": 500, "harina": 400, "gelatina": 200,
-        "maracuya": 300, "pan": 400
+        "zanahoria": 700, "cebolla": 800, "papa": 1000, "lechuga": 600,
+        "pepino": 300, "tomate": 700, "pollo": 1000, "ajo": 200, "perejil": 200,
+        "merluza": 800, "limon": 400, "arroz": 700, "calabacin": 300,
+        "manzana": 600, "pera": 500, "naranja": 400, "gelatina": 200, "fruta": 300
     },
     "composicion": {
         "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
@@ -138,13 +69,9 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Sopa de Tomate": 6, "Sopa de Lentejas": 6, "Ensalada Cesar": 6,
-            "Ceviche de Atun": 6, "Pollo a la Plancha": 6, "Pescado al Vapor": 6,
-            "Lasana de Verduras": 6, "Carne al Horno": 6, "Pure de Papas": 6,
-            "Ensalada Mixta": 6, "Arroz con Verduras": 6, "Tarta de Verduras": 6,
-            "Fruta Picada": 6, "Flan de Caramelo": 6, "Helado de Frutilla": 6,
-            "Brownie de Chocolate": 6, "Gelatina de Limon": 6, "Mousse de Maracuya": 6,
-            "Budin de Pan": 6
+            "Sopa de Verduras": 30, "Ensalada Fresca": 30, "Pollo al Vapor": 30,
+            "Merluza al Vapor": 30, "Arroz Integral": 30, "Verduras Salteadas": 30,
+            "Fruta Picada": 30, "Gelatina Light": 30
         }
     }
 }
