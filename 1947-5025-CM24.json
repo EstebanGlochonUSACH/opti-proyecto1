@@ -1,0 +1,69 @@
+{
+    "presupuesto": 700558,
+    "platos": {
+        "Lentejas Banquete": {
+            "costo": 2508,
+            "nutrientes": {"calorias": 320, "proteinas": 25},
+            "ingredientes": {"lentejas": 1000},
+            "tipo": "entrada"
+        },
+        "Poroto Verde Congelado": {
+            "costo": 7556,
+            "nutrientes": {"calorias": 150, "proteinas": 5},
+            "ingredientes": {"poroto_verde": 2000},
+            "tipo": "acompanamiento"
+        },
+        "Choclo Congelado": {
+            "costo": 1629,
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"choclo": 500},
+            "tipo": "acompanamiento"
+        },
+        "Poroto Granado Congelado": {
+            "costo": 48722,
+            "nutrientes": {"calorias": 400, "proteinas": 20},
+            "ingredientes": {"poroto_granado": 1000},
+            "tipo": "principal"
+        },
+        "Mermelada Ambrosoli de Durazno": {
+            "costo": 4621,
+            "nutrientes": {"calorias": 250, "proteinas": 1},
+            "ingredientes": {"durazno": 1000},
+            "tipo": "postre"
+        },
+        "Duraznos en Cubitos en Conserva": {
+            "costo": 1486,
+            "nutrientes": {"calorias": 100, "proteinas": 1},
+            "ingredientes": {"durazno": 500},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "lentejas": 20000,
+        "poroto_verde": 50000,
+        "choclo": 40000,
+        "poroto_granado": 10000,
+        "durazno": 30000
+    },
+    "composicion": {
+        "desayuno": {"entrada": 1, "principal": 0, "postre": 1, "acompanamiento": 1},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 1}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Lentejas Banquete": 3,
+            "Poroto Verde Congelado": 2,
+            "Choclo Congelado": 2,
+            "Poroto Granado Congelado": 1,
+            "Mermelada Ambrosoli de Durazno": 3,
+            "Duraznos en Cubitos en Conserva": 3
+        }
+    }
+}

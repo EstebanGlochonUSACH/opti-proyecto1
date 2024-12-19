@@ -1,0 +1,63 @@
+{
+    "presupuesto": 775475,
+    "platos": {
+        "Saborizante Frutilla Cola Cao": {
+            "costo": 2110,
+            "nutrientes": {"calorias": 150, "proteinas": 3},
+            "ingredientes": {"frutilla": 400},
+            "tipo": "entrada"
+        },
+        "Saborizante Chocolate Cola Cao": {
+            "costo": 5210,
+            "nutrientes": {"calorias": 180, "proteinas": 4},
+            "ingredientes": {"chocolate": 1000},
+            "tipo": "entrada"
+        },
+        "Refresco Concentrado Piña/Naranja": {
+            "costo": 3260,
+            "nutrientes": {"calorias": 120, "proteinas": 2},
+            "ingredientes": {"piña": 800, "naranja": 200},
+            "tipo": "postre"
+        },
+        "Flan de Vainilla": {
+            "costo": 2380,
+            "nutrientes": {"calorias": 200, "proteinas": 5},
+            "ingredientes": {"vainilla": 100},
+            "tipo": "postre"
+        },
+        "Té Lipton": {
+            "costo": 1620,
+            "nutrientes": {"calorias": 0, "proteinas": 0},
+            "ingredientes": {"té": 1000},
+            "tipo": "acompañamiento"
+        }
+    },
+    "ingredientes": {
+        "frutilla": 24000,
+        "chocolate": 50000,
+        "piña": 40000,
+        "naranja": 10000,
+        "vainilla": 10000,
+        "té": 48000
+    },
+    "composicion": {
+        "desayuno": {"entrada": 1, "principal": 0, "postre": 0, "acompanamiento": 1},
+        "almuerzo": {"entrada": 1, "principal": 0, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 0, "postre": 1, "acompanamiento": 1}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 200, "max_calorias": 400},
+        "almuerzo": {"min_calorias": 600, "max_calorias": 800},
+        "cena": {"min_calorias": 300, "max_calorias": 500},
+        "dia": {"min_calorias": 1500, "max_calorias": 2500}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Saborizante Frutilla Cola Cao": 2,
+            "Saborizante Chocolate Cola Cao": 2,
+            "Refresco Concentrado Piña/Naranja": 3,
+            "Flan de Vainilla": 2,
+            "Té Lipton": 3
+        }
+    }
+}

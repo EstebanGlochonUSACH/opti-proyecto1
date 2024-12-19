@@ -1,0 +1,62 @@
+{
+    "presupuesto": 1024442,
+    "platos": {
+        "Sémola Carozzi": {
+            "costo": 1679,
+            "nutrientes": {"calorias": 340, "proteinas": 10},
+            "ingredientes": {"semola": 500},
+            "tipo": "acompanamiento"
+        },
+        "Puré Instantáneo Maggi": {
+            "costo": 6782,
+            "nutrientes": {"calorias": 370, "proteinas": 7},
+            "ingredientes": {"papa": 1000},
+            "tipo": "acompanamiento"
+        },
+        "Galletas Dulces McKay": {
+            "costo": 1138,
+            "nutrientes": {"calorias": 430, "proteinas": 5},
+            "ingredientes": {"harina": 100},
+            "tipo": "postre"
+        },
+        "Cereal Chocapic Nestlé": {
+            "costo": 3133,
+            "nutrientes": {"calorias": 450, "proteinas": 8},
+            "ingredientes": {"cereal": 400},
+            "tipo": "desayuno"
+        },
+        "Queso Parmesano Rallado Colun": {
+            "costo": 1345,
+            "nutrientes": {"calorias": 100, "proteinas": 10},
+            "ingredientes": {"queso": 80},
+            "tipo": "acompanamiento"
+        }
+    },
+    "ingredientes": {
+        "semola": 10000,
+        "papa": 20000,
+        "harina": 5000,
+        "cereal": 10000,
+        "queso": 5000
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 0, "postre": 1, "acompanamiento": 1},
+        "almuerzo": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Sémola Carozzi": 5,
+            "Puré Instantáneo Maggi": 3,
+            "Galletas Dulces McKay": 3,
+            "Cereal Chocapic Nestlé": 3,
+            "Queso Parmesano Rallado Colun": 3
+        }
+    }
+}

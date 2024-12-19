@@ -1,4 +1,4 @@
-import os, platform, json
+import os, platform, json, sys
 import pulp
 import time
 import pandas as pd
@@ -99,7 +99,7 @@ def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupues
     return resultados
 
 # Ejemplo de uso
-datos = json.load(open('test.json'))
+datos = json.load(open(sys.argv[1], 'r'))
 
 # Llamar a la función con datos de prueba
 resultados = menu_optimization(

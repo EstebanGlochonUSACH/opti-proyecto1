@@ -1,0 +1,80 @@
+{
+    "presupuesto": 4500000,
+    "platos": {
+        "Sopa de Verduras": {
+            "costo": 300,
+            "nutrientes": {"calorias": 150, "proteinas": 4},
+            "ingredientes": {"zanahoria": 50, "papa": 40, "apio": 30},
+            "tipo": "entrada"
+        },
+        "Ensalada Cesar": {
+            "costo": 350,
+            "nutrientes": {"calorias": 200, "proteinas": 6},
+            "ingredientes": {"lechuga": 70, "pollo": 40, "queso": 30},
+            "tipo": "entrada"
+        },
+        "Pechuga de Pollo": {
+            "costo": 1000,
+            "nutrientes": {"calorias": 500, "proteinas": 45},
+            "ingredientes": {"pollo": 150, "ajo": 20, "limon": 10},
+            "tipo": "principal"
+        },
+        "Merluza a la Plancha": {
+            "costo": 1100,
+            "nutrientes": {"calorias": 400, "proteinas": 35},
+            "ingredientes": {"merluza": 200, "aceite": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Arroz Integral": {
+            "costo": 200,
+            "nutrientes": {"calorias": 150, "proteinas": 5},
+            "ingredientes": {"arroz": 100},
+            "tipo": "acompanamiento"
+        },
+        "Verduras Salteadas": {
+            "costo": 250,
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"zanahoria": 40, "zapallo": 30, "cebolla": 30},
+            "tipo": "acompanamiento"
+        },
+        "Yogur Natural": {
+            "costo": 200,
+            "nutrientes": {"calorias": 180, "proteinas": 8},
+            "ingredientes": {"leche": 100},
+            "tipo": "postre"
+        },
+        "Fruta de Temporada": {
+            "costo": 150,
+            "nutrientes": {"calorias": 100, "proteinas": 1},
+            "ingredientes": {"manzana": 50, "pera": 40},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "zanahoria": 500, "papa": 600, "apio": 400,
+        "lechuga": 800, "pollo": 1200, "queso": 400,
+        "ajo": 200, "limon": 300, "merluza": 1000,
+        "aceite": 300, "perejil": 200, "arroz": 1000,
+        "zapallo": 500, "cebolla": 400, "leche": 600,
+        "manzana": 500, "pera": 400
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Sopa de Verduras": 11, "Ensalada Cesar": 11,
+            "Pechuga de Pollo": 11, "Merluza a la Plancha": 11,
+            "Arroz Integral": 11, "Verduras Salteadas": 11,
+            "Yogur Natural": 11, "Fruta de Temporada": 11
+        }
+    }
+}
