@@ -1,9 +1,16 @@
+import os, platform
 import pulp
 import time
 import pandas as pd
 import pprint
 
 pp = pprint.PrettyPrinter()
+if os.name == 'posix' and platform.system() == 'Linux':
+    CPLEX_PATH = '/opt/ibm/ILOG/CPLEX_Studio_Community2212/cplex/bin/x86-64_linux/cplex'
+elif os.name == 'nt' and platform.system() == 'Windows':
+    CPLEX_PATH = '/opt/ibm/ILOG/CPLEX_Studio_Community2212/cplex/bin/x86-64_linux/cplex'
+else:
+    raise Exception('Unkown OS')
 
 def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupuesto, composicion):
     """
@@ -64,7 +71,7 @@ def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupues
 
     # Resolver el problema
     start_time = time.time()
-    prob.solve(pulp.CPLEX(path="/opt/ibm/ILOG/CPLEX_Studio_Community2212/cplex/bin/x86-64_linux/cplex", msg=True))
+    prob.solve(pulp.CPLEX(path=CPLEX_PATH, msg=True))
     end_time = time.time()
 
     # Verificar el estado del modelo
