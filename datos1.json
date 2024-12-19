@@ -2,7 +2,6 @@
     "presupuesto": 40000,
     "platos": {
         "Ensalada de Frutas": {
-            
             "costo": 200,
             "nutrientes": {"calorias": 150, "proteinas": 3},
             "ingredientes": {"manzana": 50, "platano": 30, "naranja": 40},

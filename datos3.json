@@ -1,0 +1,132 @@
+{
+    "presupuesto": 80000,
+    "platos": {
+        "Crema de Esparragos": {
+            "costo": 300,
+            "nutrientes": {"calorias": 170, "proteinas": 4},
+            "ingredientes": {"esparragos": 50, "crema": 30},
+            "tipo": "entrada"
+        },
+        "Gazpacho Andaluz": {
+            "costo": 280,
+            "nutrientes": {"calorias": 150, "proteinas": 2},
+            "ingredientes": {"tomate": 70, "pepino": 30, "pan": 20},
+            "tipo": "entrada"
+        },
+        "Sopa de Champinones": {
+            "costo": 250,
+            "nutrientes": {"calorias": 180, "proteinas": 4},
+            "ingredientes": {"champiñones": 50, "cebolla": 30},
+            "tipo": "entrada"
+        },
+        "Ceviche de Reineta": {
+            "costo": 450,
+            "nutrientes": {"calorias": 200, "proteinas": 15},
+            "ingredientes": {"reineta": 100, "limon": 50, "cilantro": 20},
+            "tipo": "entrada"
+        },
+        "Lomo Saltado": {
+            "costo": 1200,
+            "nutrientes": {"calorias": 650, "proteinas": 40},
+            "ingredientes": {"carne": 200, "papa": 100, "cebolla": 50},
+            "tipo": "principal"
+        },
+        "Tallarines con Salsa Bolonesa": {
+            "costo": 950,
+            "nutrientes": {"calorias": 600, "proteinas": 35},
+            "ingredientes": {"tallarines": 150, "carne_molida": 100, "salsa_tomate": 50},
+            "tipo": "principal"
+        },
+        "Merluza al Vapor": {
+            "costo": 800,
+            "nutrientes": {"calorias": 500, "proteinas": 30},
+            "ingredientes": {"merluza": 200, "limon": 30, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Tortilla de Espinacas": {
+            "costo": 700,
+            "nutrientes": {"calorias": 450, "proteinas": 25},
+            "ingredientes": {"espinaca": 100, "huevo": 50, "queso": 30},
+            "tipo": "principal"
+        },
+        "Papas Doradas": {
+            "costo": 200,
+            "nutrientes": {"calorias": 200, "proteinas": 3},
+            "ingredientes": {"papa": 150},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada Rusa": {
+            "costo": 250,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"papa": 100, "zanahoria": 50, "arvejas": 30},
+            "tipo": "acompanamiento"
+        },
+        "Arroz Integral": {
+            "costo": 180,
+            "nutrientes": {"calorias": 120, "proteinas": 4},
+            "ingredientes": {"arroz_integral": 100},
+            "tipo": "acompanamiento"
+        },
+        "Verduras Gratinadas": {
+            "costo": 300,
+            "nutrientes": {"calorias": 200, "proteinas": 6},
+            "ingredientes": {"zapallo": 50, "queso": 30, "zanahoria": 20},
+            "tipo": "acompanamiento"
+        },
+        "Tarta de Manzana": {
+            "costo": 400,
+            "nutrientes": {"calorias": 300, "proteinas": 4},
+            "ingredientes": {"manzana": 150, "harina": 50, "azucar": 30},
+            "tipo": "postre"
+        },
+        "Mousse de Chocolate": {
+            "costo": 450,
+            "nutrientes": {"calorias": 350, "proteinas": 6},
+            "ingredientes": {"chocolate": 100, "leche": 50, "huevo": 20},
+            "tipo": "postre"
+        },
+        "Helado de Vainilla": {
+            "costo": 300,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"leche": 100, "azucar": 50, "vainilla": 10},
+            "tipo": "postre"
+        },
+        "Gelatina con Fruta": {
+            "costo": 150,
+            "nutrientes": {"calorias": 150, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "fruta": 50},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "esparragos": 300, "crema": 200, "tomate": 500, "pepino": 200,
+        "pan": 300, "champiñones": 400, "cebolla": 500, "reineta": 800,
+        "limon": 600, "cilantro": 300, "carne": 1000, "papa": 1500,
+        "tallarines": 800, "carne_molida": 400, "salsa_tomate": 300,
+        "merluza": 600, "espinaca": 500, "huevo": 600, "queso": 400,
+        "arvejas": 300, "zapallo": 400, "manzana": 700, "harina": 500,
+        "azucar": 500, "chocolate": 400, "leche": 800, "vainilla": 200,
+        "gelatina": 300, "fruta": 500
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 1}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Crema de Esparragos": 8, "Gazpacho Andaluz": 8, "Sopa de Champinones": 8,
+            "Ceviche de Reineta": 8, "Lomo Saltado": 8, "Tallarines con Salsa Bolonesa": 8,
+            "Merluza al Vapor": 8, "Tortilla de Espinacas": 8, "Papas Doradas": 8,
+            "Ensalada Rusa": 8, "Arroz Integral": 8, "Verduras Gratinadas": 8,
+            "Tarta de Manzana": 8, "Mousse de Chocolate": 8, "Helado de Vainilla": 8,
+            "Gelatina con Fruta": 8
+        }
+    }
+}

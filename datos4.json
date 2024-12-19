@@ -1,0 +1,93 @@
+{
+    "presupuesto": 60000,
+    "platos": {
+        "Crema de Zapallo": {
+            "costo": 250,
+            "nutrientes": {"calorias": 180, "proteinas": 5},
+            "ingredientes": {"zapallo": 100, "crema": 50},
+            "tipo": "entrada"
+        },
+        "Consome de Pollo": {
+            "costo": 300,
+            "nutrientes": {"calorias": 150, "proteinas": 7},
+            "ingredientes": {"pollo": 50, "zanahoria": 30, "apio": 20},
+            "tipo": "entrada"
+        },
+        "Pasta Alfredo": {
+            "costo": 850,
+            "nutrientes": {"calorias": 600, "proteinas": 25},
+            "ingredientes": {"pasta": 150, "crema": 50, "queso": 30},
+            "tipo": "principal"
+        },
+        "Estofado de Vacuno": {
+            "costo": 950,
+            "nutrientes": {"calorias": 700, "proteinas": 40},
+            "ingredientes": {"vacuno": 200, "papas": 100, "cebolla": 50},
+            "tipo": "principal"
+        },
+        "Pure de Papas": {
+            "costo": 200,
+            "nutrientes": {"calorias": 200, "proteinas": 3},
+            "ingredientes": {"papa": 150, "mantequilla": 20},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada Chilena": {
+            "costo": 150,
+            "nutrientes": {"calorias": 100, "proteinas": 2},
+            "ingredientes": {"tomate": 50, "cebolla": 30, "cilantro": 20},
+            "tipo": "acompanamiento"
+        },
+        "Budin de Pan": {
+            "costo": 300,
+            "nutrientes": {"calorias": 300, "proteinas": 6},
+            "ingredientes": {"pan": 100, "leche": 50, "azucar": 30},
+            "tipo": "postre"
+        },
+        "Tiramisu": {
+            "costo": 450,
+            "nutrientes": {"calorias": 400, "proteinas": 8},
+            "ingredientes": {"mascarpone": 50, "cafe": 20, "bizcocho": 50},
+            "tipo": "postre"
+        },
+        "Arroz con Leche": {
+            "costo": 250,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"arroz": 100, "leche": 50, "canela": 10},
+            "tipo": "postre"
+        },
+        "Fruta Picada": {
+            "costo": 200,
+            "nutrientes": {"calorias": 120, "proteinas": 2},
+            "ingredientes": {"manzana": 50, "pera": 40, "plátano": 30},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "zapallo": 500, "crema": 300, "pollo": 800, "zanahoria": 500,
+        "apio": 300, "pasta": 600, "queso": 400, "vacuno": 1000,
+        "papas": 800, "cebolla": 600, "mantequilla": 200, "tomate": 500,
+        "cilantro": 300, "pan": 400, "leche": 1000, "azucar": 500,
+        "mascarpone": 200, "cafe": 100, "bizcocho": 400, "arroz": 600,
+        "canela": 100, "manzana": 400, "pera": 300, "plátano": 200
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Crema de Zapallo": 11, "Consome de Pollo": 11,
+            "Pasta Alfredo": 11, "Estofado de Vacuno": 11,
+            "Pure de Papas": 11, "Ensalada Chilena": 11,
+            "Budin de Pan": 11, "Tiramisu": 11,
+            "Arroz con Leche": 11, "Fruta Picada": 11
+        }
+    }
+}

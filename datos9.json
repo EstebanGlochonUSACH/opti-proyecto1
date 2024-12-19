@@ -1,0 +1,136 @@
+{
+    "presupuesto": 250000,
+    "platos": {
+        "Crema de Zapallo": {
+            "costo": 280,
+            "nutrientes": {"calorias": 140, "proteinas": 3},
+            "ingredientes": {"zapallo": 100, "crema": 50, "papa": 40},
+            "tipo": "entrada"
+        },
+        "Ensalada Fresca": {
+            "costo": 260,
+            "nutrientes": {"calorias": 120, "proteinas": 2},
+            "ingredientes": {"lechuga": 50, "tomate": 50, "pepino": 40},
+            "tipo": "entrada"
+        },
+        "Sopa de Verduras": {
+            "costo": 300,
+            "nutrientes": {"calorias": 160, "proteinas": 4},
+            "ingredientes": {"zanahoria": 70, "papa": 50, "cebolla": 40},
+            "tipo": "entrada"
+        },
+        "Ceviche de Camaron": {
+            "costo": 950,
+            "nutrientes": {"calorias": 250, "proteinas": 20},
+            "ingredientes": {"camaron": 150, "limon": 50, "cebolla": 30},
+            "tipo": "entrada"
+        },
+        "Pollo al Horno": {
+            "costo": 1200,
+            "nutrientes": {"calorias": 650, "proteinas": 45},
+            "ingredientes": {"pollo": 200, "ajo": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Carne Estofada": {
+            "costo": 1150,
+            "nutrientes": {"calorias": 700, "proteinas": 50},
+            "ingredientes": {"carne": 250, "zanahoria": 50, "papa": 50},
+            "tipo": "principal"
+        },
+        "Merluza al Vapor": {
+            "costo": 1050,
+            "nutrientes": {"calorias": 450, "proteinas": 35},
+            "ingredientes": {"merluza": 200, "limon": 40, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Tallarines con Salsa Blanca": {
+            "costo": 850,
+            "nutrientes": {"calorias": 600, "proteinas": 20},
+            "ingredientes": {"tallarines": 150, "crema": 50, "queso": 40},
+            "tipo": "principal"
+        },
+        "Papas al Horno": {
+            "costo": 350,
+            "nutrientes": {"calorias": 220, "proteinas": 3},
+            "ingredientes": {"papa": 150, "ajo": 20, "perejil": 10},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada Mixta": {
+            "costo": 250,
+            "nutrientes": {"calorias": 100, "proteinas": 2},
+            "ingredientes": {"lechuga": 60, "zanahoria": 40, "tomate": 40},
+            "tipo": "acompanamiento"
+        },
+        "Arroz con Verduras": {
+            "costo": 400,
+            "nutrientes": {"calorias": 230, "proteinas": 5},
+            "ingredientes": {"arroz": 150, "champiñones": 50, "zanahoria": 40},
+            "tipo": "acompanamiento"
+        },
+        "Verduras Gratinadas": {
+            "costo": 450,
+            "nutrientes": {"calorias": 300, "proteinas": 6},
+            "ingredientes": {"zapallo": 60, "queso": 40, "cebolla": 40},
+            "tipo": "acompanamiento"
+        },
+        "Flan de Caramelo": {
+            "costo": 350,
+            "nutrientes": {"calorias": 300, "proteinas": 8},
+            "ingredientes": {"leche": 100, "huevo": 50, "azucar": 30},
+            "tipo": "postre"
+        },
+        "Gelatina de Mora": {
+            "costo": 200,
+            "nutrientes": {"calorias": 120, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "mora": 50},
+            "tipo": "postre"
+        },
+        "Mousse de Frutilla": {
+            "costo": 400,
+            "nutrientes": {"calorias": 320, "proteinas": 5},
+            "ingredientes": {"frutilla": 80, "leche": 50, "huevo": 20},
+            "tipo": "postre"
+        },
+        "Brownie de Nuez": {
+            "costo": 550,
+            "nutrientes": {"calorias": 450, "proteinas": 8},
+            "ingredientes": {"chocolate": 100, "nuez": 50, "huevo": 30},
+            "tipo": "postre"
+        },
+        "Bizcocho de Cafe": {
+            "costo": 400,
+            "nutrientes": {"calorias": 300, "proteinas": 6},
+            "ingredientes": {"harina": 100, "cafe": 40, "huevo": 50},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "zapallo": 500, "crema": 600, "lechuga": 700, "tomate": 800, "pepino": 400,
+        "zanahoria": 1000, "papa": 1500, "camaron": 400, "limon": 600, "ajo": 300,
+        "perejil": 200, "pollo": 1500, "carne": 1000, "merluza": 700, "tallarines": 600,
+        "queso": 500, "arroz": 1000, "champiñones": 400, "leche": 1000, "huevo": 800,
+        "azucar": 600, "gelatina": 300, "mora": 300, "frutilla": 400, "chocolate": 500,
+        "nuez": 300, "harina": 700, "cafe": 300
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Crema de Zapallo": 8, "Ensalada Fresca": 8, "Sopa de Verduras": 8,
+            "Ceviche de Camaron": 8, "Pollo al Horno": 8, "Carne Estofada": 8,
+            "Merluza al Vapor": 8, "Tallarines con Salsa Blanca": 8, "Papas al Horno": 8,
+            "Ensalada Mixta": 8, "Arroz con Verduras": 8, "Verduras Gratinadas": 8,
+            "Flan de Caramelo": 8, "Gelatina de Mora": 8, "Mousse de Frutilla": 8,
+            "Brownie de Nuez": 8, "Bizcocho de Cafe": 8
+        }
+    }
+}

@@ -1,0 +1,137 @@
+{
+    "presupuesto": 300000,
+    "platos": {
+        "Sopa de Ajo": {
+            "costo": 250,
+            "nutrientes": {"calorias": 130, "proteinas": 3},
+            "ingredientes": {"ajo": 50, "pan": 30, "huevo": 20},
+            "tipo": "entrada"
+        },
+        "Crema de Esparragos": {
+            "costo": 280,
+            "nutrientes": {"calorias": 140, "proteinas": 4},
+            "ingredientes": {"esparragos": 80, "crema": 50, "cebolla": 30},
+            "tipo": "entrada"
+        },
+        "Ensalada Cesar": {
+            "costo": 300,
+            "nutrientes": {"calorias": 180, "proteinas": 5},
+            "ingredientes": {"lechuga": 60, "pollo": 50, "queso": 30},
+            "tipo": "entrada"
+        },
+        "Ceviche de Tilapia": {
+            "costo": 950,
+            "nutrientes": {"calorias": 260, "proteinas": 22},
+            "ingredientes": {"tilapia": 150, "limon": 40, "cebolla": 30},
+            "tipo": "entrada"
+        },
+        "Pollo a la Naranja": {
+            "costo": 1200,
+            "nutrientes": {"calorias": 650, "proteinas": 45},
+            "ingredientes": {"pollo": 200, "naranja": 60, "miel": 30},
+            "tipo": "principal"
+        },
+        "Carne Asada": {
+            "costo": 1300,
+            "nutrientes": {"calorias": 700, "proteinas": 50},
+            "ingredientes": {"carne": 250, "ajo": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Pescado Empanizado": {
+            "costo": 1100,
+            "nutrientes": {"calorias": 500, "proteinas": 35},
+            "ingredientes": {"pescado": 200, "pan_rallado": 50, "huevo": 20},
+            "tipo": "principal"
+        },
+        "Ravioles de Espinaca": {
+            "costo": 900,
+            "nutrientes": {"calorias": 600, "proteinas": 25},
+            "ingredientes": {"pasta": 150, "espinaca": 80, "queso": 40},
+            "tipo": "principal"
+        },
+        "Papas Gratinadas": {
+            "costo": 400,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"papa": 150, "queso": 50, "crema": 30},
+            "tipo": "acompanamiento"
+        },
+        "Arroz con Gandules": {
+            "costo": 350,
+            "nutrientes": {"calorias": 220, "proteinas": 6},
+            "ingredientes": {"arroz": 150, "gandules": 50, "cebolla": 20},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada de Frijoles": {
+            "costo": 300,
+            "nutrientes": {"calorias": 200, "proteinas": 10},
+            "ingredientes": {"frijoles": 100, "tomate": 50, "cilantro": 20},
+            "tipo": "acompanamiento"
+        },
+        "Timbal de Verduras": {
+            "costo": 450,
+            "nutrientes": {"calorias": 300, "proteinas": 7},
+            "ingredientes": {"zanahoria": 50, "zapallo": 50, "queso": 40},
+            "tipo": "acompanamiento"
+        },
+        "Flan de Chocolate": {
+            "costo": 400,
+            "nutrientes": {"calorias": 350, "proteinas": 8},
+            "ingredientes": {"leche": 100, "huevo": 50, "chocolate": 50},
+            "tipo": "postre"
+        },
+        "Gelatina de Uva": {
+            "costo": 250,
+            "nutrientes": {"calorias": 120, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "uva": 50},
+            "tipo": "postre"
+        },
+        "Mousse de Maracuya": {
+            "costo": 450,
+            "nutrientes": {"calorias": 320, "proteinas": 5},
+            "ingredientes": {"maracuya": 80, "leche": 50, "huevo": 20},
+            "tipo": "postre"
+        },
+        "Brownie de Almendras": {
+            "costo": 550,
+            "nutrientes": {"calorias": 460, "proteinas": 7},
+            "ingredientes": {"chocolate": 100, "almendra": 50, "huevo": 30},
+            "tipo": "postre"
+        },
+        "Bizcocho de Miel": {
+            "costo": 400,
+            "nutrientes": {"calorias": 300, "proteinas": 5},
+            "ingredientes": {"harina": 100, "miel": 40, "huevo": 50},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "ajo": 500, "pan": 400, "huevo": 800, "esparragos": 400, "crema": 800,
+        "lechuga": 600, "pollo": 1500, "queso": 800, "tilapia": 600, "limon": 800,
+        "naranja": 500, "miel": 400, "carne": 1000, "pescado": 800, "pan_rallado": 400,
+        "pasta": 1000, "espinaca": 600, "papa": 1500, "arroz": 1000, "gandules": 400,
+        "frijoles": 500, "tomate": 800, "cilantro": 300, "zanahoria": 700, "zapallo": 600,
+        "leche": 1000, "chocolate": 600, "gelatina": 400, "uva": 300, "maracuya": 300,
+        "almendra": 300, "harina": 700
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Sopa de Ajo": 8, "Crema de Esparragos": 8, "Ensalada Cesar": 8,
+            "Ceviche de Tilapia": 8, "Pollo a la Naranja": 8, "Carne Asada": 8,
+            "Pescado Empanizado": 8, "Ravioles de Espinaca": 8, "Papas Gratinadas": 8,
+            "Arroz con Gandules": 8, "Ensalada de Frijoles": 8, "Timbal de Verduras": 8,
+            "Flan de Chocolate": 8, "Gelatina de Uva": 8, "Mousse de Maracuya": 8,
+            "Brownie de Almendras": 8, "Bizcocho de Miel": 8
+        }
+    }
+}

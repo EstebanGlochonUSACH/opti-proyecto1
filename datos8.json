@@ -1,0 +1,150 @@
+{
+    "presupuesto": 200000,
+    "platos": {
+        "Sopa de Espinaca": {
+            "costo": 280,
+            "nutrientes": {"calorias": 140, "proteinas": 5},
+            "ingredientes": {"espinaca": 80, "crema": 40, "ajo": 20},
+            "tipo": "entrada"
+        },
+        "Crema de Zanahoria": {
+            "costo": 250,
+            "nutrientes": {"calorias": 130, "proteinas": 3},
+            "ingredientes": {"zanahoria": 90, "crema": 50, "papa": 40},
+            "tipo": "entrada"
+        },
+        "Sopa de Mariscos": {
+            "costo": 350,
+            "nutrientes": {"calorias": 200, "proteinas": 15},
+            "ingredientes": {"mariscos": 150, "cebolla": 50, "pimiento": 40},
+            "tipo": "entrada"
+        },
+        "Ceviche Mixto": {
+            "costo": 950,
+            "nutrientes": {"calorias": 260, "proteinas": 25},
+            "ingredientes": {"pescado": 100, "mariscos": 80, "limon": 50},
+            "tipo": "entrada"
+        },
+        "Pollo en Salsa Verde": {
+            "costo": 1000,
+            "nutrientes": {"calorias": 600, "proteinas": 40},
+            "ingredientes": {"pollo": 150, "cilantro": 30, "crema": 50},
+            "tipo": "principal"
+        },
+        "Chuleta de Cerdo": {
+            "costo": 1200,
+            "nutrientes": {"calorias": 750, "proteinas": 50},
+            "ingredientes": {"cerdo": 200, "ajo": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Pescado Gratinado": {
+            "costo": 1100,
+            "nutrientes": {"calorias": 500, "proteinas": 35},
+            "ingredientes": {"pescado": 150, "queso": 50, "crema": 40},
+            "tipo": "principal"
+        },
+        "Arroz con Pollo": {
+            "costo": 800,
+            "nutrientes": {"calorias": 550, "proteinas": 30},
+            "ingredientes": {"arroz": 150, "pollo": 100, "zanahoria": 50},
+            "tipo": "principal"
+        },
+        "Verduras al Vapor": {
+            "costo": 300,
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"brocoli": 50, "zanahoria": 40, "calabaza": 30},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada de Colores": {
+            "costo": 250,
+            "nutrientes": {"calorias": 100, "proteinas": 2},
+            "ingredientes": {"lechuga": 60, "tomate": 40, "pepino": 40},
+            "tipo": "acompanamiento"
+        },
+        "Timbal de Papa": {
+            "costo": 350,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"papa": 150, "queso": 40, "perejil": 20},
+            "tipo": "acompanamiento"
+        },
+        "Arroz al Curry": {
+            "costo": 400,
+            "nutrientes": {"calorias": 220, "proteinas": 6},
+            "ingredientes": {"arroz": 150, "curry": 20, "zanahoria": 40},
+            "tipo": "acompanamiento"
+        },
+        "Tarta de Frutas": {
+            "costo": 450,
+            "nutrientes": {"calorias": 300, "proteinas": 4},
+            "ingredientes": {"fruta_mixta": 100, "harina": 50, "azucar": 40},
+            "tipo": "postre"
+        },
+        "Helado de Mango": {
+            "costo": 500,
+            "nutrientes": {"calorias": 350, "proteinas": 5},
+            "ingredientes": {"mango": 80, "leche": 100, "azucar": 40},
+            "tipo": "postre"
+        },
+        "Budin de Vainilla": {
+            "costo": 300,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"leche": 100, "huevo": 50, "azucar": 30},
+            "tipo": "postre"
+        },
+        "Gelatina de Fresa": {
+            "costo": 200,
+            "nutrientes": {"calorias": 120, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "fresa": 50},
+            "tipo": "postre"
+        },
+        "Mousse de Limon": {
+            "costo": 400,
+            "nutrientes": {"calorias": 300, "proteinas": 4},
+            "ingredientes": {"limon": 80, "leche": 50, "huevo": 30},
+            "tipo": "postre"
+        },
+        "Brownie de Nuez": {
+            "costo": 550,
+            "nutrientes": {"calorias": 450, "proteinas": 8},
+            "ingredientes": {"chocolate": 100, "harina": 50, "nuez": 40},
+            "tipo": "postre"
+        },
+        "Bizcocho de Canela": {
+            "costo": 350,
+            "nutrientes": {"calorias": 300, "proteinas": 5},
+            "ingredientes": {"harina": 80, "canela": 30, "huevo": 50},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "espinaca": 500, "crema": 800, "zanahoria": 1000, "mariscos": 500,
+        "cebolla": 800, "pimiento": 400, "pescado": 800, "pollo": 1500,
+        "limon": 600, "cilantro": 400, "cerdo": 600, "queso": 600, "arroz": 1000,
+        "brocoli": 600, "calabaza": 400, "lechuga": 800, "tomate": 800,
+        "pepino": 500, "papa": 1500, "curry": 300, "fruta_mixta": 400,
+        "harina": 700, "azucar": 800, "mango": 400, "leche": 1000, "huevo": 800,
+        "gelatina": 400, "fresa": 300, "chocolate": 500, "nuez": 200, "canela": 200
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Sopa de Espinaca": 8, "Crema de Zanahoria": 8, "Sopa de Mariscos": 8,
+            "Ceviche Mixto": 8, "Pollo en Salsa Verde": 8, "Chuleta de Cerdo": 8,
+            "Pescado Gratinado": 8, "Arroz con Pollo": 8, "Verduras al Vapor": 8,
+            "Ensalada de Colores": 8, "Timbal de Papa": 8, "Arroz al Curry": 8,
+            "Tarta de Frutas": 8, "Helado de Mango": 8, "Budin de Vainilla": 8,
+            "Gelatina de Fresa": 8, "Mousse de Limon": 8, "Brownie de Nuez": 8,
+            "Bizcocho de Canela": 8
+        }
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "presupuesto": 150000,
+    "platos": {
+        "Sopa de Verduras": {
+            "costo": 300,
+            "nutrientes": {"calorias": 150, "proteinas": 4},
+            "ingredientes": {"zanahoria": 50, "cebolla": 30, "papa": 40},
+            "tipo": "entrada"
+        },
+        "Ensalada Fresca": {
+            "costo": 250,
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"lechuga": 60, "pepino": 30, "tomate": 50},
+            "tipo": "entrada"
+        },
+        "Sopa de Pollo": {
+            "costo": 350,
+            "nutrientes": {"calorias": 180, "proteinas": 7},
+            "ingredientes": {"pollo": 70, "cebolla": 40, "zanahoria": 30},
+            "tipo": "entrada"
+        },
+        "Arroz Chaufa": {
+            "costo": 800,
+            "nutrientes": {"calorias": 600, "proteinas": 20},
+            "ingredientes": {"arroz": 150, "pollo": 80, "huevo": 30},
+            "tipo": "principal"
+        },
+        "Pasta con Salsa Roja": {
+            "costo": 700,
+            "nutrientes": {"calorias": 550, "proteinas": 15},
+            "ingredientes": {"pasta": 150, "tomate": 100, "queso": 50},
+            "tipo": "principal"
+        },
+        "Pescado Empanizado": {
+            "costo": 950,
+            "nutrientes": {"calorias": 500, "proteinas": 25},
+            "ingredientes": {"pescado": 150, "pan_rallado": 50, "huevo": 20},
+            "tipo": "principal"
+        },
+        "Tortilla de Verduras": {
+            "costo": 750,
+            "nutrientes": {"calorias": 450, "proteinas": 12},
+            "ingredientes": {"huevo": 50, "zanahoria": 30, "cebolla": 20},
+            "tipo": "principal"
+        },
+        "Carne Guisada": {
+            "costo": 1000,
+            "nutrientes": {"calorias": 700, "proteinas": 40},
+            "ingredientes": {"carne": 200, "cebolla": 50, "papa": 100},
+            "tipo": "principal"
+        },
+        "Papas Fritas": {
+            "costo": 300,
+            "nutrientes": {"calorias": 300, "proteinas": 3},
+            "ingredientes": {"papa": 150, "aceite": 50},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada Rusa": {
+            "costo": 350,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"papa": 100, "zanahoria": 50, "arvejas": 30},
+            "tipo": "acompanamiento"
+        },
+        "Arroz Blanco": {
+            "costo": 200,
+            "nutrientes": {"calorias": 150, "proteinas": 2},
+            "ingredientes": {"arroz": 150},
+            "tipo": "acompanamiento"
+        },
+        "Verduras Salteadas": {
+            "costo": 400,
+            "nutrientes": {"calorias": 180, "proteinas": 4},
+            "ingredientes": {"zanahoria": 40, "calabacin": 30, "cebolla": 30},
+            "tipo": "acompanamiento"
+        },
+        "Flan Casero": {
+            "costo": 400,
+            "nutrientes": {"calorias": 300, "proteinas": 6},
+            "ingredientes": {"huevo": 50, "leche": 100, "azucar": 40},
+            "tipo": "postre"
+        },
+        "Gelatina de Frutas": {
+            "costo": 250,
+            "nutrientes": {"calorias": 100, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "fruta": 50},
+            "tipo": "postre"
+        },
+        "Helado de Chocolate": {
+            "costo": 500,
+            "nutrientes": {"calorias": 400, "proteinas": 8},
+            "ingredientes": {"chocolate": 100, "leche": 100, "azucar": 50},
+            "tipo": "postre"
+        },
+        "Budin de Pan": {
+            "costo": 300,
+            "nutrientes": {"calorias": 250, "proteinas": 5},
+            "ingredientes": {"pan": 100, "leche": 50, "azucar": 30},
+            "tipo": "postre"
+        },
+        "Manzana al Horno": {
+            "costo": 200,
+            "nutrientes": {"calorias": 150, "proteinas": 1},
+            "ingredientes": {"manzana": 100, "canela": 10},
+            "tipo": "postre"
+        },
+        "Tarta de Queso": {
+            "costo": 600,
+            "nutrientes": {"calorias": 500, "proteinas": 10},
+            "ingredientes": {"queso": 100, "harina": 50, "azucar": 40},
+            "tipo": "postre"
+        },
+        "Brownie Clasico": {
+            "costo": 550,
+            "nutrientes": {"calorias": 450, "proteinas": 7},
+            "ingredientes": {"chocolate": 100, "harina": 50, "huevo": 30},
+            "tipo": "postre"
+        },
+        "Ensalada de Frutas": {
+            "costo": 300,
+            "nutrientes": {"calorias": 200, "proteinas": 2},
+            "ingredientes": {"manzana": 50, "pera": 50, "naranja": 50},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "zanahoria": 700, "cebolla": 800, "papa": 1000, "lechuga": 500,
+        "pepino": 300, "tomate": 500, "pollo": 1000, "arroz": 800,
+        "huevo": 600, "pescado": 500, "pan_rallado": 400, "carne": 1000,
+        "aceite": 500, "arvejas": 300, "calabacin": 300, "chocolate": 500,
+        "leche": 1000, "azucar": 600, "gelatina": 300, "fruta": 500,
+        "manzana": 700, "canela": 100, "queso": 500, "harina": 500,
+        "pan": 400, "pera": 400, "naranja": 400
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Sopa de Verduras": 8, "Ensalada Fresca": 8, "Sopa de Pollo": 8,
+            "Arroz Chaufa": 8, "Pasta con Salsa Roja": 8, "Pescado Empanizado": 8,
+            "Tortilla de Verduras": 8, "Carne Guisada": 8, "Papas Fritas": 8,
+            "Ensalada Rusa": 8, "Arroz Blanco": 8, "Verduras Salteadas": 8,
+            "Flan Casero": 8, "Gelatina de Frutas": 8, "Helado de Chocolate": 8,
+            "Budin de Pan": 8, "Manzana al Horno": 8, "Tarta de Queso": 8,
+            "Brownie Clasico": 8, "Ensalada de Frutas": 8
+        }
+    }
+}

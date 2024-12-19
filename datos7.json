@@ -1,0 +1,151 @@
+{
+    "presupuesto": 180000,
+    "platos": {
+        "Crema de Brocoli": {
+            "costo": 280,
+            "nutrientes": {"calorias": 130, "proteinas": 4},
+            "ingredientes": {"brocoli": 80, "crema": 40, "cebolla": 20},
+            "tipo": "entrada"
+        },
+        "Ensalada Primavera": {
+            "costo": 260,
+            "nutrientes": {"calorias": 120, "proteinas": 3},
+            "ingredientes": {"lechuga": 50, "tomate": 50, "zanahoria": 40},
+            "tipo": "entrada"
+        },
+        "Gazpacho Tradicional": {
+            "costo": 300,
+            "nutrientes": {"calorias": 150, "proteinas": 2},
+            "ingredientes": {"tomate": 80, "pepino": 50, "pimiento": 40},
+            "tipo": "entrada"
+        },
+        "Ceviche de Salmon": {
+            "costo": 900,
+            "nutrientes": {"calorias": 250, "proteinas": 20},
+            "ingredientes": {"salmon": 120, "limon": 50, "cilantro": 20},
+            "tipo": "entrada"
+        },
+        "Lomo a la Parrilla": {
+            "costo": 1200,
+            "nutrientes": {"calorias": 700, "proteinas": 50},
+            "ingredientes": {"carne": 250, "ajo": 20, "perejil": 10},
+            "tipo": "principal"
+        },
+        "Fideos al Pesto": {
+            "costo": 850,
+            "nutrientes": {"calorias": 600, "proteinas": 15},
+            "ingredientes": {"pasta": 150, "albahaca": 30, "queso": 50},
+            "tipo": "principal"
+        },
+        "Merluza con Verduras": {
+            "costo": 1000,
+            "nutrientes": {"calorias": 450, "proteinas": 30},
+            "ingredientes": {"merluza": 200, "zapallo": 80, "cebolla": 50},
+            "tipo": "principal"
+        },
+        "Pollo al Curry": {
+            "costo": 900,
+            "nutrientes": {"calorias": 500, "proteinas": 35},
+            "ingredientes": {"pollo": 150, "curry": 30, "crema": 50},
+            "tipo": "principal"
+        },
+        "Papas Salteadas": {
+            "costo": 300,
+            "nutrientes": {"calorias": 250, "proteinas": 4},
+            "ingredientes": {"papa": 150, "ajo": 20, "perejil": 10},
+            "tipo": "acompanamiento"
+        },
+        "Arroz Pilaf": {
+            "costo": 350,
+            "nutrientes": {"calorias": 220, "proteinas": 5},
+            "ingredientes": {"arroz": 150, "cebolla": 30, "mantequilla": 20},
+            "tipo": "acompanamiento"
+        },
+        "Timbal de Verduras": {
+            "costo": 400,
+            "nutrientes": {"calorias": 300, "proteinas": 6},
+            "ingredientes": {"zapallo": 60, "zanahoria": 40, "queso": 40},
+            "tipo": "acompanamiento"
+        },
+        "Ensalada Griega": {
+            "costo": 280,
+            "nutrientes": {"calorias": 200, "proteinas": 6},
+            "ingredientes": {"pepino": 50, "tomate": 50, "queso_feta": 40},
+            "tipo": "acompanamiento"
+        },
+        "Fruta Picada": {
+            "costo": 200,
+            "nutrientes": {"calorias": 100, "proteinas": 1},
+            "ingredientes": {"manzana": 50, "pera": 40, "naranja": 50},
+            "tipo": "postre"
+        },
+        "Tarta de Durazno": {
+            "costo": 450,
+            "nutrientes": {"calorias": 350, "proteinas": 6},
+            "ingredientes": {"durazno": 80, "harina": 50, "azucar": 40},
+            "tipo": "postre"
+        },
+        "Helado de Coco": {
+            "costo": 500,
+            "nutrientes": {"calorias": 400, "proteinas": 5},
+            "ingredientes": {"coco": 80, "leche": 100, "azucar": 40},
+            "tipo": "postre"
+        },
+        "Flan de Cafe": {
+            "costo": 350,
+            "nutrientes": {"calorias": 300, "proteinas": 8},
+            "ingredientes": {"huevo": 50, "leche": 100, "cafe": 20},
+            "tipo": "postre"
+        },
+        "Gelatina de Uva": {
+            "costo": 250,
+            "nutrientes": {"calorias": 120, "proteinas": 2},
+            "ingredientes": {"gelatina": 50, "uva": 50},
+            "tipo": "postre"
+        },
+        "Brownie de Chocolate": {
+            "costo": 550,
+            "nutrientes": {"calorias": 450, "proteinas": 7},
+            "ingredientes": {"chocolate": 100, "harina": 50, "huevo": 30},
+            "tipo": "postre"
+        },
+        "Bizcocho de Vainilla": {
+            "costo": 400,
+            "nutrientes": {"calorias": 300, "proteinas": 5},
+            "ingredientes": {"harina": 80, "azucar": 50, "huevo": 50},
+            "tipo": "postre"
+        }
+    },
+    "ingredientes": {
+        "brocoli": 400, "crema": 500, "lechuga": 600, "tomate": 800, "zanahoria": 700,
+        "pepino": 400, "pimiento": 300, "salmon": 500, "limon": 600, "cilantro": 300,
+        "carne": 1000, "ajo": 300, "perejil": 200, "pasta": 700, "albahaca": 200,
+        "queso": 500, "merluza": 600, "zapallo": 500, "pollo": 1000, "curry": 200,
+        "papa": 1500, "arroz": 800, "mantequilla": 300, "queso_feta": 200, "manzana": 600,
+        "pera": 500, "naranja": 500, "durazno": 400, "harina": 500, "azucar": 600,
+        "coco": 300, "leche": 1000, "huevo": 800, "cafe": 100, "gelatina": 300, "uva": 300,
+        "chocolate": 400
+    },
+    "composicion": {
+        "desayuno": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0},
+        "almuerzo": {"entrada": 1, "principal": 1, "postre": 1, "acompanamiento": 1},
+        "cena": {"entrada": 0, "principal": 1, "postre": 1, "acompanamiento": 0}
+    },
+    "nutrientes": {
+        "desayuno": {"min_calorias": 300, "max_calorias": 500},
+        "almuerzo": {"min_calorias": 800, "max_calorias": 1200},
+        "cena": {"min_calorias": 600, "max_calorias": 800},
+        "dia": {"min_calorias": 2000, "max_calorias": 3000}
+    },
+    "restricciones": {
+        "frecuencia": {
+            "Crema de Brocoli": 8, "Ensalada Primavera": 8, "Gazpacho Tradicional": 8,
+            "Ceviche de Salmon": 8, "Lomo a la Parrilla": 8, "Fideos al Pesto": 8,
+            "Merluza con Verduras": 8, "Pollo al Curry": 8, "Papas Salteadas": 8,
+            "Arroz Pilaf": 8, "Timbal de Verduras": 8, "Ensalada Griega": 8,
+            "Fruta Picada": 8, "Tarta de Durazno": 8, "Helado de Coco": 8,
+            "Flan de Cafe": 8, "Gelatina de Uva": 8, "Brownie de Chocolate": 8,
+            "Bizcocho de Vainilla": 8
+        }
+    }
+}
