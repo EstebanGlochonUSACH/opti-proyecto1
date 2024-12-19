@@ -126,12 +126,12 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Sopa de Ajo": 8, "Crema de Esparragos": 8, "Ensalada Cesar": 8,
-            "Ceviche de Tilapia": 8, "Pollo a la Naranja": 8, "Carne Asada": 8,
-            "Pescado Empanizado": 8, "Ravioles de Espinaca": 8, "Papas Gratinadas": 8,
-            "Arroz con Gandules": 8, "Ensalada de Frijoles": 8, "Timbal de Verduras": 8,
-            "Flan de Chocolate": 8, "Gelatina de Uva": 8, "Mousse de Maracuya": 8,
-            "Brownie de Almendras": 8, "Bizcocho de Miel": 8
+            "Sopa de Ajo": 6, "Crema de Esparragos": 6, "Ensalada Cesar": 6,
+            "Ceviche de Tilapia": 6, "Pollo a la Naranja": 6, "Carne Asada": 6,
+            "Pescado Empanizado": 6, "Ravioles de Espinaca": 6, "Papas Gratinadas": 6,
+            "Arroz con Gandules": 6, "Ensalada de Frijoles": 6, "Timbal de Verduras": 6,
+            "Flan de Chocolate": 6, "Gelatina de Uva": 6, "Mousse de Maracuya": 6,
+            "Brownie de Almendras": 6, "Bizcocho de Miel": 6
         }
     }
 }

@@ -144,13 +144,13 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Sopa de Verduras": 8, "Ensalada Fresca": 8, "Sopa de Pollo": 8,
-            "Arroz Chaufa": 8, "Pasta con Salsa Roja": 8, "Pescado Empanizado": 8,
-            "Tortilla de Verduras": 8, "Carne Guisada": 8, "Papas Fritas": 8,
-            "Ensalada Rusa": 8, "Arroz Blanco": 8, "Verduras Salteadas": 8,
-            "Flan Casero": 8, "Gelatina de Frutas": 8, "Helado de Chocolate": 8,
-            "Budin de Pan": 8, "Manzana al Horno": 8, "Tarta de Queso": 8,
-            "Brownie Clasico": 8, "Ensalada de Frutas": 8
+            "Sopa de Verduras": 5, "Ensalada Fresca": 5, "Sopa de Pollo": 5,
+            "Arroz Chaufa": 5, "Pasta con Salsa Roja": 5, "Pescado Empanizado": 5,
+            "Tortilla de Verduras": 5, "Carne Guisada": 5, "Papas Fritas": 5,
+            "Ensalada Rusa": 5, "Arroz Blanco": 5, "Verduras Salteadas": 5,
+            "Flan Casero": 5, "Gelatina de Frutas": 5, "Helado de Chocolate": 5,
+            "Budin de Pan": 5, "Manzana al Horno": 5, "Tarta de Queso": 5,
+            "Brownie Clasico": 5, "Ensalada de Frutas": 5
         }
     }
 }

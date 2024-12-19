@@ -125,12 +125,12 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Crema de Zapallo": 8, "Ensalada Fresca": 8, "Sopa de Verduras": 8,
-            "Ceviche de Camaron": 8, "Pollo al Horno": 8, "Carne Estofada": 8,
-            "Merluza al Vapor": 8, "Tallarines con Salsa Blanca": 8, "Papas al Horno": 8,
-            "Ensalada Mixta": 8, "Arroz con Verduras": 8, "Verduras Gratinadas": 8,
-            "Flan de Caramelo": 8, "Gelatina de Mora": 8, "Mousse de Frutilla": 8,
-            "Brownie de Nuez": 8, "Bizcocho de Cafe": 8
+            "Crema de Zapallo": 6, "Ensalada Fresca": 6, "Sopa de Verduras": 6,
+            "Ceviche de Camaron": 6, "Pollo al Horno": 6, "Carne Estofada": 6,
+            "Merluza al Vapor": 6, "Tallarines con Salsa Blanca": 6, "Papas al Horno": 6,
+            "Ensalada Mixta": 6, "Arroz con Verduras": 6, "Verduras Gratinadas": 6,
+            "Flan de Caramelo": 6, "Gelatina de Mora": 6, "Mousse de Frutilla": 6,
+            "Brownie de Nuez": 6, "Bizcocho de Cafe": 6
         }
     }
 }

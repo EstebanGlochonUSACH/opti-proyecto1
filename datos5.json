@@ -138,13 +138,13 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Sopa de Tomate": 8, "Sopa de Lentejas": 8, "Ensalada Cesar": 8,
-            "Ceviche de Atun": 8, "Pollo a la Plancha": 8, "Pescado al Vapor": 8,
-            "Lasana de Verduras": 8, "Carne al Horno": 8, "Pure de Papas": 8,
-            "Ensalada Mixta": 8, "Arroz con Verduras": 8, "Tarta de Verduras": 8,
-            "Fruta Picada": 8, "Flan de Caramelo": 8, "Helado de Frutilla": 8,
-            "Brownie de Chocolate": 8, "Gelatina de Limon": 8, "Mousse de Maracuya": 8,
-            "Budin de Pan": 8
+            "Sopa de Tomate": 6, "Sopa de Lentejas": 6, "Ensalada Cesar": 6,
+            "Ceviche de Atun": 6, "Pollo a la Plancha": 6, "Pescado al Vapor": 6,
+            "Lasana de Verduras": 6, "Carne al Horno": 6, "Pure de Papas": 6,
+            "Ensalada Mixta": 6, "Arroz con Verduras": 6, "Tarta de Verduras": 6,
+            "Fruta Picada": 6, "Flan de Caramelo": 6, "Helado de Frutilla": 6,
+            "Brownie de Chocolate": 6, "Gelatina de Limon": 6, "Mousse de Maracuya": 6,
+            "Budin de Pan": 6
         }
     }
 }

@@ -138,13 +138,13 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Sopa de Espinaca": 8, "Crema de Zanahoria": 8, "Sopa de Mariscos": 8,
-            "Ceviche Mixto": 8, "Pollo en Salsa Verde": 8, "Chuleta de Cerdo": 8,
-            "Pescado Gratinado": 8, "Arroz con Pollo": 8, "Verduras al Vapor": 8,
-            "Ensalada de Colores": 8, "Timbal de Papa": 8, "Arroz al Curry": 8,
-            "Tarta de Frutas": 8, "Helado de Mango": 8, "Budin de Vainilla": 8,
-            "Gelatina de Fresa": 8, "Mousse de Limon": 8, "Brownie de Nuez": 8,
-            "Bizcocho de Canela": 8
+            "Sopa de Espinaca": 6, "Crema de Zanahoria": 6, "Sopa de Mariscos": 6,
+            "Ceviche Mixto": 6, "Pollo en Salsa Verde": 6, "Chuleta de Cerdo": 6,
+            "Pescado Gratinado": 6, "Arroz con Pollo": 6, "Verduras al Vapor": 6,
+            "Ensalada de Colores": 6, "Timbal de Papa": 6, "Arroz al Curry": 6,
+            "Tarta de Frutas": 6, "Helado de Mango": 6, "Budin de Vainilla": 6,
+            "Gelatina de Fresa": 6, "Mousse de Limon": 6, "Brownie de Nuez": 6,
+            "Bizcocho de Canela": 6
         }
     }
 }

@@ -139,13 +139,13 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Crema de Brocoli": 8, "Ensalada Primavera": 8, "Gazpacho Tradicional": 8,
-            "Ceviche de Salmon": 8, "Lomo a la Parrilla": 8, "Fideos al Pesto": 8,
-            "Merluza con Verduras": 8, "Pollo al Curry": 8, "Papas Salteadas": 8,
-            "Arroz Pilaf": 8, "Timbal de Verduras": 8, "Ensalada Griega": 8,
-            "Fruta Picada": 8, "Tarta de Durazno": 8, "Helado de Coco": 8,
-            "Flan de Cafe": 8, "Gelatina de Uva": 8, "Brownie de Chocolate": 8,
-            "Bizcocho de Vainilla": 8
+            "Crema de Brocoli": 6, "Ensalada Primavera": 6, "Gazpacho Tradicional": 6,
+            "Ceviche de Salmon": 6, "Lomo a la Parrilla": 6, "Fideos al Pesto": 6,
+            "Merluza con Verduras": 6, "Pollo al Curry": 6, "Papas Salteadas": 6,
+            "Arroz Pilaf": 6, "Timbal de Verduras": 6, "Ensalada Griega": 6,
+            "Fruta Picada": 6, "Tarta de Durazno": 6, "Helado de Coco": 6,
+            "Flan de Cafe": 6, "Gelatina de Uva": 6, "Brownie de Chocolate": 6,
+            "Bizcocho de Vainilla": 6
         }
     }
 }

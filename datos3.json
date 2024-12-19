@@ -121,12 +121,12 @@
     },
     "restricciones": {
         "frecuencia": {
-            "Crema de Esparragos": 8, "Gazpacho Andaluz": 8, "Sopa de Champinones": 8,
-            "Ceviche de Reineta": 8, "Lomo Saltado": 8, "Tallarines con Salsa Bolonesa": 8,
-            "Merluza al Vapor": 8, "Tortilla de Espinacas": 8, "Papas Doradas": 8,
-            "Ensalada Rusa": 8, "Arroz Integral": 8, "Verduras Gratinadas": 8,
-            "Tarta de Manzana": 8, "Mousse de Chocolate": 8, "Helado de Vainilla": 8,
-            "Gelatina con Fruta": 8
+            "Crema de Esparragos": 6, "Gazpacho Andaluz": 6, "Sopa de Champinones": 6,
+            "Ceviche de Reineta": 6, "Lomo Saltado": 6, "Tallarines con Salsa Bolonesa": 6,
+            "Merluza al Vapor": 6, "Tortilla de Espinacas": 6, "Papas Doradas": 6,
+            "Ensalada Rusa": 6, "Arroz Integral": 6, "Verduras Gratinadas": 6,
+            "Tarta de Manzana": 6, "Mousse de Chocolate": 6, "Helado de Vainilla": 6,
+            "Gelatina con Fruta": 6
         }
     }
 }
