@@ -1,17 +1,21 @@
 import pulp
 import time
 import pandas as pd
+import pprint
 
-def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupuesto):
+pp = pprint.PrettyPrinter()
+
+def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupuesto, composicion):
     """
-    Modelo de optimización para la planificación de menús hospitalarios.
+    Modelo de optimización para la planificación de menús hospitalarios con composición variable.
 
     Argumentos:
         platos (dict): Información de cada plato con sus costos y proporciones de nutrientes.
         ingredientes (dict): Disponibilidad y costos de los ingredientes.
         nutrientes (dict): Requerimientos mínimos y máximos de nutrientes.
-        restricciones (dict): Restricciones de frecuencia, variedad y cultura.
+        restricciones (dict): Restricciones de frecuencia y culturales.
         presupuesto (float): Presupuesto máximo semanal para los menús.
+        composicion (dict): Requisitos de composición para cada comida.
 
     Retorna:
         dict: Resultados del modelo, incluyendo costos, asignaciones, y validación nutricional.
@@ -20,37 +24,43 @@ def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupues
     prob = pulp.LpProblem("Menu_Optimization", pulp.LpMinimize)
 
     # Variables de decisión
-    x = pulp.LpVariable.dicts("Plato", platos.keys(), cat="Binary")
+    comidas = ['desayuno', 'almuerzo', 'cena']
+    dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
+    x = pulp.LpVariable.dicts("Plato", [(i, c, d) for i in platos for c in comidas for d in dias], cat="Binary")
 
     # Función objetivo: Minimizar el costo total
-    prob += pulp.lpSum(platos[i]['costo'] * x[i] for i in platos), "Costo_Total"
+    prob += pulp.lpSum(platos[i]['costo'] * x[(i, c, d)] for i in platos for c in comidas for d in dias), "Costo_Total"
 
-    # Restricciones de composición de colaciones
-    if 'composicion' in restricciones:
-        for tipo, minimo in restricciones['composicion'].items():
-            prob += (pulp.lpSum(x[i] for i in platos if platos[i].get('tipo') == tipo) >= minimo,
-                    f"Composicion_Minima_{tipo}")
+    # Restricciones de composición variable
+    for c in comidas:
+        for d in dias:
+            for tipo, cantidad in composicion[c].items():
+                prob += (pulp.lpSum(x[(i, c, d)] for i in platos if platos[i]['tipo'] == tipo) == cantidad,
+                        f"Composicion_{tipo}_{c}_{d}")
 
     # Restricciones de frecuencia de platos
-    if 'frecuencia' in restricciones:
-        for plato, freq in restricciones['frecuencia'].items():
-            prob += (x[plato] <= freq, f"Frecuencia_{plato}")
+    for i in platos:
+        prob += (pulp.lpSum(x[(i, c, d)] for c in comidas for d in dias) <= restricciones['frecuencia'][i],
+                f"Frecuencia_{i}")
 
-    # Restricciones de requerimientos nutricionales
-    for nutriente, (min_val, max_val) in nutrientes.items():
-        prob += (pulp.lpSum(platos[i]['nutrientes'][nutriente] * x[i] for i in platos) >= min_val,
-                f"Requerimiento_Minimo_{nutriente}")
-        prob += (pulp.lpSum(platos[i]['nutrientes'][nutriente] * x[i] for i in platos) <= max_val,
-                f"Requerimiento_Maximo_{nutriente}")
+    # Restricciones de requerimientos nutricionales por comida
+    # for c in comidas:
+    #     for d in dias:
+    #         prob += (pulp.lpSum(platos[i]['nutrientes']['calorias'] * x[(i, c, d)] for i in platos) >= nutrientes[c]['min_calorias'],
+    #                 f"MinCalorias_{c}_{d}")
+    #         prob += (pulp.lpSum(platos[i]['nutrientes']['calorias'] * x[(i, c, d)] for i in platos) <= nutrientes[c]['max_calorias'],
+    #                 f"MaxCalorias_{c}_{d}")
+
+    # Restricciones de nutrientes por día
+    for d in dias:
+        prob += (pulp.lpSum(platos[i]['nutrientes']['calorias'] * x[(i, c, d)] for i in platos for c in comidas) >= nutrientes['dia']['min_calorias'],
+                f"MinCaloriasDia_{d}")
+        prob += (pulp.lpSum(platos[i]['nutrientes']['calorias'] * x[(i, c, d)] for i in platos for c in comidas) <= nutrientes['dia']['max_calorias'],
+                f"MaxCaloriasDia_{d}")
 
     # Restricción de presupuesto
-    prob += (pulp.lpSum(platos[i]['costo'] * x[i] for i in platos) <= presupuesto, "Presupuesto")
-
-    # Restricciones culturales y gastronómicas
-    if 'culturales' in restricciones:
-        for cultural_restriction, value in restricciones['culturales'].items():
-            prob += (pulp.lpSum(x[i] for i in value['platos']) >= value['min'],
-                    f"Restriccion_Cultural_{cultural_restriction}")
+    prob += (pulp.lpSum(platos[i]['costo'] * x[(i, c, d)] for i in platos for c in comidas for d in dias) <= presupuesto,
+            "Presupuesto")
 
     # Resolver el problema
     start_time = time.time()
@@ -65,7 +75,6 @@ def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupues
             'status': pulp.LpStatus[prob.status],
             'costo_total': None,
             'platos_seleccionados': {},
-            'nutrientes_cubiertos': {},
             'tiempo_computacional': end_time - start_time,
             'mensaje': "El modelo no encontró solución factible. Verifique las restricciones y parámetros."
         }
@@ -74,75 +83,56 @@ def menu_optimization(platos, ingredientes, nutrientes, restricciones, presupues
     resultados = {
         'status': pulp.LpStatus[prob.status],
         'costo_total': pulp.value(prob.objective),
-        'platos_seleccionados': {i: x[i].varValue for i in platos if x[i].varValue and x[i].varValue > 0.5},
-        'nutrientes_cubiertos': {
-            nutriente: sum(platos[i]['nutrientes'][nutriente] * x[i].varValue for i in platos)
-            for nutriente in nutrientes
+        'platos_seleccionados': {
+            (i, c, d): x[(i, c, d)].varValue for i in platos for c in comidas for d in dias if x[(i, c, d)].varValue > 0.5
         },
         'tiempo_computacional': end_time - start_time
     }
 
     return resultados
 
-# Definir las 10 instancias de ejemplos
-instancias = [
-    {
-        'id': 1,
-        'platos': {
-            'Plato1': {'costo': 550, 'nutrientes': {'calorias': 320, 'proteinas': 25}, 'ingredientes': {'arroz': 120, 'pollo': 80}, 'tipo': 'principal'},
-            'Plato2': {'costo': 400, 'nutrientes': {'calorias': 280, 'proteinas': 15}, 'ingredientes': {'pasta': 90, 'queso': 50}, 'tipo': 'entrada'},
-            'Plato3': {'costo': 450, 'nutrientes': {'calorias': 300, 'proteinas': 18}, 'ingredientes': {'lentejas': 100, 'zanahoria': 40}, 'tipo': 'postre'}
-        },
-        'ingredientes': {'arroz': 600, 'pollo': 400, 'pasta': 500, 'queso': 300, 'lentejas': 400, 'zanahoria': 200},
-        'nutrientes': {'calorias': (2100, 2600), 'proteinas': (70, 110)},
-        'restricciones': {
-            'frecuencia': {'Plato1': 2, 'Plato2': 3, 'Plato3': 2},
-            'composicion': {'principal': 1, 'entrada': 1, 'postre': 1}
-        },
-        'presupuesto': 7000
-    },
-    {
-        'id': 2,
-        'platos': {
-            'Plato4': {'costo': 600, 'nutrientes': {'calorias': 400, 'proteinas': 30}, 'ingredientes': {'pollo': 150, 'papas': 100}, 'tipo': 'principal'},
-            'Plato5': {'costo': 500, 'nutrientes': {'calorias': 350, 'proteinas': 20}, 'ingredientes': {'arroz': 100, 'verduras': 50}, 'tipo': 'entrada'},
-            'Plato6': {'costo': 450, 'nutrientes': {'calorias': 300, 'proteinas': 25}, 'ingredientes': {'quinoa': 90, 'zapallo': 40}, 'tipo': 'postre'}
-        },
-        'ingredientes': {'pollo': 500, 'papas': 300, 'arroz': 400, 'verduras': 200, 'quinoa': 300, 'zapallo': 150},
-        'nutrientes': {'calorias': (2200, 2700), 'proteinas': (80, 120)},
-        'restricciones': {
-            'frecuencia': {'Plato4': 3, 'Plato5': 2, 'Plato6': 2},
-            'composicion': {'principal': 1, 'entrada': 1, 'postre': 1}
-        },
-        'presupuesto': 7500
+# Ejemplo de uso
+platos = {
+    'Entrada1': {'costo': 300, 'nutrientes': {'calorias': 100, 'proteinas': 5}, 'ingredientes': {'lechuga': 20, 'zanahoria': 10}, 'tipo': 'entrada'},
+    'Entrada2': {'costo': 350, 'nutrientes': {'calorias': 120, 'proteinas': 6}, 'ingredientes': {'palta': 15, 'tomate': 25}, 'tipo': 'entrada'},
+    'Principal1': {'costo': 800, 'nutrientes': {'calorias': 600, 'proteinas': 35}, 'ingredientes': {'pollo': 150, 'arroz': 100}, 'tipo': 'principal'},
+    'Principal2': {'costo': 750, 'nutrientes': {'calorias': 550, 'proteinas': 30}, 'ingredientes': {'carne': 200, 'papas': 150}, 'tipo': 'principal'},
+    'Acomp1': {'costo': 200, 'nutrientes': {'calorias': 150, 'proteinas': 3}, 'ingredientes': {'pure': 100}, 'tipo': 'acompanamiento'},
+    'Acomp2': {'costo': 220, 'nutrientes': {'calorias': 180, 'proteinas': 4}, 'ingredientes': {'ensalada': 80}, 'tipo': 'acompanamiento'},
+    'Postre1': {'costo': 150, 'nutrientes': {'calorias': 100, 'proteinas': 2}, 'ingredientes': {'manzana': 50}, 'tipo': 'postre'},
+    'Postre2': {'costo': 180, 'nutrientes': {'calorias': 120, 'proteinas': 3}, 'ingredientes': {'pera': 60}, 'tipo': 'postre'}
+}
+
+ingredientes = {
+    'lechuga': 500, 'zanahoria': 300, 'palta': 200, 'tomate': 400,
+    'pollo': 1000, 'arroz': 700, 'carne': 800, 'papas': 600,
+    'pure': 500, 'ensalada': 400, 'manzana': 300, 'pera': 200
+}
+
+datos_composicion = {
+    'desayuno': {'entrada': 0, 'principal': 1, 'postre': 1, 'acompanamiento': 0},
+    'almuerzo': {'entrada': 1, 'principal': 1, 'postre': 1, 'acompanamiento': 1},
+    'cena': {'entrada': 0, 'principal': 1, 'postre': 1, 'acompanamiento': 0}
+}
+
+datos_nutrientes = {
+    # 'desayuno': {'min_calorias': 300, 'max_calorias': 400},
+    # 'almuerzo': {'min_calorias': 800, 'max_calorias': 1000},
+    # 'cena': {'min_calorias': 600, 'max_calorias': 700},
+    'dia': {'min_calorias': 2200, 'max_calorias': 2700}
+}
+
+datos_restricciones = {
+    'frecuencia': {
+        'Entrada1': 11, 'Entrada2': 11,
+        'Principal1': 11, 'Principal2': 11,
+        'Acomp1': 11, 'Acomp2': 11,
+        'Postre1': 11, 'Postre2': 11
     }
-]
+}
 
-# Ejecutar todas las instancias y recolectar resultados
-resultados_totales = []
-for instancia in instancias:
-    resultados = menu_optimization(
-        platos=instancia['platos'],
-        ingredientes=instancia['ingredientes'],
-        nutrientes=instancia['nutrientes'],
-        restricciones=instancia['restricciones'],
-        presupuesto=instancia['presupuesto']
-    )
-    resultados['instancia_id'] = instancia['id']
-    resultados_totales.append(resultados)
+presupuesto = 5000000
 
-# Generar un DataFrame con los resultados
-df_resultados = pd.DataFrame([
-    {
-        'Instancia': r['instancia_id'],
-        'Costo Total': r['costo_total'],
-        'Tiempo Computacional (s)': r['tiempo_computacional'],
-        'Platos Seleccionados': r['platos_seleccionados'],
-        'Nutrientes Cubiertos': r['nutrientes_cubiertos'],
-        'Mensaje': r.get('mensaje', 'Solución encontrada correctamente')
-    }
-    for r in resultados_totales
-])
-
-# Mostrar resultados
-print(df_resultados)
+# Llamar a la función con datos de prueba
+resultados = menu_optimization(platos, ingredientes, datos_nutrientes, datos_restricciones, presupuesto, datos_composicion)
+pp.pprint(resultados)
